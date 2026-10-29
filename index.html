@@ -19178,4 +19178,16 @@ button.action{cursor:pointer}button:disabled{opacity:.5;cursor:default;box-shado
     } catch (_) { /* Ignore malformed state from another tab. */ }
   });
 })();
-</script></body></html>
+</script><script id="site-analytics">
+(function () {
+  'use strict';
+  if (window.location.hostname !== 'kerenmorwak.github.io' ||
+      !window.location.pathname.startsWith('/integration-practice/')) return;
+  var beacon = document.createElement('script');
+  beacon.type = 'module';
+  beacon.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  beacon.setAttribute('data-cf-beacon', "{\"token\":\"d53916274ba4463fbb9305e64f8879d3\"}");
+  document.body.appendChild(beacon);
+})();
+</script>
+</body></html>
