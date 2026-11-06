@@ -1,0 +1,5 @@
+.warmup-intro { margin: 0 0 28px; }
+.warmup-card h4 { margin: 0 0 16px; font-size: 1.12rem; color: var(--accent); }
+.warmup-steps { margin-top: 22px; }
+.warmup-card .formula-display { margin: 16px 0; }
+@media print { .warmup-steps { display: none !important; } }

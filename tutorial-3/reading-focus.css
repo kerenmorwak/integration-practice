@@ -1,0 +1,27 @@
+/* Preserve full lecture pages; only neighbouring subject matter is blurred. */
+.notes-pages { padding: 0; border: 0; background: transparent; }
+.note-page { max-width: 960px; margin-bottom: 28px; }
+.note-enlarge { display: block; }
+.note-sheet { position: relative; overflow: hidden; background: #fff; border: 1px solid #e0e4e7; box-shadow: 0 2px 7px #172d3e0b; }
+.note-sheet > img { display: block; width: 100%; height: auto; margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; }
+.note-sheet-focused > .note-context { filter: blur(4px); opacity: .65; }
+.note-sheet-focused > .note-focused-content { position: absolute; inset: 0; clip-path: inset(var(--focus-top) 0 var(--focus-bottom) 0); }
+.reading-page-view { margin: 0; padding: 20px; background: #f4f6f6; color: #1a2f3e; font-family: Arial, sans-serif; }
+.reading-page-view main, .reading-page-header { max-width: 1100px; margin: 0 auto; }
+.reading-page-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 0 0 18px; font-size: 15px; line-height: 1.5; }
+.reading-page-header a { color: #1c666a; text-underline-offset: 3px; }
+.reading-zoom { display: flex; align-items: center; gap: 6px; }
+.reading-zoom button { background: white; border: 1px solid #c9d7d8; border-radius: 5px; min-height: 40px; min-width: 40px; padding: 6px 10px; color: #1c666a; font: inherit; cursor: pointer; }
+.reading-zoom button:disabled { opacity: .4; cursor: default; }
+.reading-page-view main { max-width: none; }
+@media (max-width:600px) {
+  .notes-pages { padding: 0; }
+  .reading-page-view { padding: 12px 6px; }
+  .reading-page-header { padding: 0 8px 12px; }
+}
+@media print {
+  .reading-page-header { display: none; }
+  .reading-page-view main { width: 100% !important; }
+  .reading-page-view { background: white; padding: 0; }
+  .note-sheet { border: 0; box-shadow: none; }
+}
