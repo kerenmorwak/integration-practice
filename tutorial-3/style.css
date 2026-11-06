@@ -33,7 +33,9 @@ button.action{cursor:pointer}button:disabled{opacity:.5;cursor:default;box-shado
 .question-heading{display:grid;gap:8px;margin-bottom:20px}.question-heading h3{font-size:1.3rem;line-height:1.5;margin:0}
 .question-source{font-size:.82rem;color:var(--muted);line-height:1.7}.question-permalink{font-size:.78rem;color:var(--accent);justify-self:start;text-underline-offset:3px}
 .math-content{font-size:1rem;line-height:1.95;min-width:0;overflow-wrap:anywhere}.math-content ol{padding-right:23px}.math-content li{margin-bottom:10px}
-.math-formula{display:inline-block;max-width:100%;height:auto!important;object-fit:contain}.formula-display{direction:ltr;text-align:center;margin:18px 0;overflow-x:auto;padding:2px 0}
+.math-formula{display:inline-block;max-width:100%;object-fit:contain}
+/* Keep the explicit TeX height on inline SVGs; auto height enlarges narrow glyphs. */
+img.math-formula{height:auto!important}.formula-display{direction:ltr;text-align:center;margin:18px 0;overflow-x:auto;padding:2px 0}
 .formula-display .math-formula{max-width:none;vertical-align:middle}.paragraph-gap{height:9px}
 .question-statement{padding-bottom:15px}.study-links{padding:12px 0 15px;border-top:1px solid #edf1ee;font-size:.82rem;line-height:1.7}
 .study-links p{margin:0 0 7px;font-weight:700;color:var(--muted)}.note-link{display:inline-block;font-size:.8rem;line-height:1.7;color:var(--accent);margin:3px 0 3px 12px;text-underline-offset:3px}
